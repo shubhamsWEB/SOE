@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" type="text/css" href="">
+
+  <title>SOE</title>
+  <style type="text/css">
+    .h1{
+      background-image: url('images/1.png');
+      margin-top: 15px;
+      float: right;
+      width: 350px;
+      height: 400px;
+      margin : 6px 2.88%;
+      position: static;
+     /* margin-top: -500px;
+      width: 300px;
+      height: 400px;
+      position: fixed;*/
+    }
+    .image{
+      margin-top: 200px;
+      width: 100%;
+      height: 50%;
+      background: black;
+      color: white;
+      text-align: center;
+      border-radius: 10px;
+    }
+    .wrapper{
+      min-height: 1px;
+      position: fixed;
+      height: auto;
+      background : #ccc;
+      margin-bottom: 5px;
+      display: none; 
+    }
+    .collapsable{
+      position: relative;
+      float: left;
+      width: 250px;
+      height: 100%;
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+ <nav>
+    <div class="nav-wrapper">
+      <a  class="brand-logo"><img src="images/soe-logo.png" onclick="redirect()" style="height: 60px; margin-left: 10px;"></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#"><span id="UserName"></span></a></li>
+        <li><a href="#"><i class="large material-icons">account_circle</i></a></li>
+        <!-- <li><a class="waves-effect waves-light btn" href="#">Login</a></li> -->
+        <li>
+          <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+        </li>
+        
+  </nav>
+  
+  <!-- <div class="" style="height: 100px; width: 600px; background: #D3D3D3;display: flex;"> -->
+    <ul class="collapsible" data-collapsible="accordion" style="display: flex; position: relative;">
+    <li style="margin-left: 300px;">
+      <div class="collapsible-header"><i class="material-icons">bookmark</i>Sector</div>
+      <div class="collapsible-body">
+        <div class="input-field col s12">
+          <select multiple id="team1">
+            <option disabled selected>Sectors</option>
+            <option >Agriculture</option>
+            <option >Driver</option>
+            <option >Construstion</option>
+            <option >Domestic Worker</option>
+            <option >Electronics</option>
+            <option >Food Processing</option>
+            <option >Jems and Jewl</option>
+            <option >Health Care</option>
+            <option >Security</option>
+            <option >Telicom</option>
+            <option >Textile</option>
+            <option >Tourisem</option>
+          </select>
+          <label></label>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">keyboard_arrow_down</i>Job Role</div>
+      <div class="collapsible-body"> 
+        <div class="input-field col s12">
+          <select multiple id="team2">
+            <option disabled selected>Roles</option>
+            <option >Full Time</option>
+            <option >Part Time</option>
+            <option >Night Shift</option>
+          </select>
+          <label></label>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Place</div>
+      <div class="collapsible-body">
+        <div class="input-field col s12">
+          <select multiple id="team3">
+            <option value="" disabled selected>Place</option>
+            <option>State</option>  
+            <option value="Assam">Assam</option>
+            <option>Bhuvneshwar</option>
+            <option>Chhattisgarh</option>
+            <option>Delhi</option>
+            <option>Firadhabad</option>
+            <option>Goa</option>
+            <option>Hydrabad</option>
+            <option>J&k</option>
+            <option>Kanpur</option>
+            <option>Madras</option>
+          </select>
+          <label></label>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">insert_emoticon</i>Sex</div>
+      <div class="collapsible-body">
+        <div class="input-field col s12">
+          <select multiple id="team4">
+            <option disabled selected>Gender</option>
+            <option value="MALE">MALE</option>
+            <option >FEMALE</option>
+            <option >OTHER</option>
+          </select>
+          <label></label>
+        </div>
+      </div>
+    </li>
+    <li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">assignment_ind</i>Experience</div>
+      <div class="collapsible-body">
+        <div class="input-field col s12">
+          <select multiple id="exp">
+            <option disabled selected>Experience</option>
+            <option >1</option>
+            <option >2</option>
+            <option >3</option>
+            <option >4</option>
+            <option >5</option>
+            <option >Experienced</option>
+          </select>
+          <label></label>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <center><a class="waves-effect waves-light btn" id="button">Apply</a></center>
+  </div>
+<!-- SCRIPTS -->
+   <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+    $('select').material_select();
+  });
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+</script>
+<script type="text/javascript">
+  function redirect() {
+    window.location.href ="../index.html";
+  }
+</script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script type="text/javascript" src="searchscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.jumbotron {
+margin-bottom: 0px;
+}
+.align{
+	margin-top: 30px;
+	margin-left: 300px;
+}
+.jumbotron .container h1 img {
+	margin-top: -10px;
+}
